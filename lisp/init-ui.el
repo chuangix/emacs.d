@@ -3,8 +3,7 @@
 (use-package emacs
   :ensure nil
   :unless (display-graphic-p)
-  :config
-  (load-theme 'leuven t))
+  :config (load-theme 'leuven t))
 
 (use-package doom-themes
   :ensure t

@@ -27,8 +27,7 @@
 (use-package paren
   :ensure nil
   :hook (after-init . show-paren-mode)
-  :custom
-  (show-paren-when-point-in-periphery t))
+  :custom (show-paren-when-point-in-periphery t))
 
 (use-package hl-line
   :ensure nil

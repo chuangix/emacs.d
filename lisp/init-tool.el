@@ -3,8 +3,7 @@
 (use-package which-key
   :ensure t
   :hook (after-init . which-key-mode)
-  :custom
-  (which-key-idle-delay 0.5))
+  :custom (which-key-idle-delay 0.5))
 
 (use-package fanyi
   :ensure t
