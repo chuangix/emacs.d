@@ -6,6 +6,10 @@
   :custom
   (which-key-idle-delay 0.5))
 
+(use-package fanyi
+  :ensure t
+  :commands fanyi-dwim fanyi-dwim2)
+
 (provide 'init-tool)
 
 ;;; init-tool.el ends here
