@@ -12,7 +12,8 @@
       load-prefer-newer t
       ring-bell-function 'ignore
       blink-cursor-mode nil
-      display-raw-bytes-as-hex t)
+      display-raw-bytes-as-hex t
+      w32-recognize-altgr nil)
 
 
 (setq-default indent-tabs-mode nil)
