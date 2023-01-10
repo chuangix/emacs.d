@@ -10,7 +10,7 @@
       auto-save-default nil
       create-lockfiles nil
       load-prefer-newer t
-      ring-bell-function 'ignore
+      visible-bell t
       blink-cursor-mode nil
       display-raw-bytes-as-hex t
       w32-recognize-altgr nil)
