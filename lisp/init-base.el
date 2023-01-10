@@ -15,7 +15,6 @@
       display-raw-bytes-as-hex t
       w32-recognize-altgr nil)
 
-
 (setq-default indent-tabs-mode nil)
 
 (use-package simple

@@ -32,6 +32,7 @@
   :demand t)
 
 (require 'init-base)
+(require 'init-tool)
 (require 'init-ui)
 
 (provide 'init)
