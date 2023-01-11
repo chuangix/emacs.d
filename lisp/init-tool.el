@@ -9,6 +9,11 @@
   :ensure t
   :commands fanyi-dwim fanyi-dwim2)
 
+(use-package session
+  :ensure t
+  :config (session-initialize)
+  :custom (desktop-save-mode t))
+
 (provide 'init-tool)
 
 ;;; init-tool.el ends here
