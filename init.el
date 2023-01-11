@@ -20,7 +20,7 @@
   (package-install 'use-package))
 (eval-and-compile
   (setq use-package-always-ensure nil)
-  (setq use-package-always-defer nil)
+  (setq use-package-always-defer t)
   (setq use-package-always-demand nil)
   (setq use-package-expand-minimally nil)
   (setq use-package-enable-imenu-support t))
@@ -31,6 +31,7 @@
   :ensure t
   :demand t)
 
+(require 'init-system)
 (require 'init-base)
 (require 'init-tool)
 (require 'init-ui)
@@ -38,15 +39,3 @@
 (provide 'init)
 
 ;;; init.el ends here
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(fanyi which-key use-package no-littering doom-themes)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

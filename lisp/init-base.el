@@ -12,8 +12,7 @@
       load-prefer-newer t
       visible-bell t
       blink-cursor-mode nil
-      display-raw-bytes-as-hex t
-      w32-recognize-altgr nil)
+      display-raw-bytes-as-hex t)
 
 (setq-default indent-tabs-mode nil)
 
