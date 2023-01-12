@@ -32,7 +32,7 @@
   :demand t)
 
 (require 'init-system)
-(require 'init-base)
+(require 'init-built-in)
 (require 'init-tool)
 (require 'init-ui)
 

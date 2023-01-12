@@ -1,4 +1,4 @@
-;;; init-base.el --- The basic settings -*- lexical-binding: t -*-
+;;; init-built-in.el --- The built-in package settings -*- lexical-binding: t -*-
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -37,6 +37,6 @@
   :ensure nil
   :hook (after-init . save-place-mode))
 
-(provide 'init-base)
+(provide 'init-built-in)
 
-;;; init-base.el ends here
+;;; init-built-in.el ends here
