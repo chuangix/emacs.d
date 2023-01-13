@@ -37,6 +37,11 @@
   :ensure nil
   :hook (after-init . save-place-mode))
 
+(use-package emacs
+  :ensure nil
+  :unless (display-graphic-p)
+  :config (load-theme 'leuven t))
+
 (provide 'init-built-in)
 
 ;;; init-built-in.el ends here
