@@ -33,13 +33,15 @@
   (("C-x o"   . ace-window))
   (("C-x C-o" . ace-swap-window))
   :custom
+  (aw-ignore-current t)
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
 
 (use-package helm
   :ensure t
   :bind
   (("M-x"     . helm-M-x)
-   ("C-x C-f" . helm-find-files)))
+   ("C-x C-f" . helm-find-files)
+   ("M-y"     . helm-show-kill-ring)))
 
 (use-package helm-descbinds
   :after helm
