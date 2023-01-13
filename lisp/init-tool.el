@@ -11,6 +11,30 @@
   :config (session-initialize)
   :custom (desktop-save-mode t))
 
+(use-package elscreen
+  :ensure t)
+
+(use-package centaur-tabs
+  :ensure t)
+
+(use-package avy
+  :ensure t
+  :bind
+  (("M-g c" . avy-goto-char-timer)
+   ("M-g l" . avy-goto-line))
+  :custom
+  (avy-background t)
+  (avy-all-windows nil)
+  (avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
+
+(use-package ace-window
+  :ensure t
+  :bind
+  (("C-x o"   . ace-window))
+  (("C-x C-o" . ace-swap-window))
+  :custom
+  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
+
 (use-package helm
   :ensure t
   :bind
@@ -20,16 +44,6 @@
 (use-package helm-descbinds
   :after helm
   :ensure t)
-
-(use-package avy
-  :ensure t
-  :hook (after-init . avy-setup-default)
-  :bind
-  (("M-g c" . avy-goto-char-timer)
-   ("M-g l" . avy-goto-line))
-  :custom
-  (avy-background t)
-  (avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
 
 (use-package fanyi
   :ensure t
