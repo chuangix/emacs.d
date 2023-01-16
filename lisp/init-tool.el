@@ -6,13 +6,6 @@
   :config (which-key-setup-side-window-right)
   :custom (which-key-idle-delay 1.5))
 
-(use-package hydra
-  :ensure t)
-
-(use-package use-package-hydra
-  :ensure t
-  :after hydra)
-
 (use-package session
   :ensure t
   :config (session-initialize)

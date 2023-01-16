@@ -34,9 +34,12 @@
   :demand t)
 
 (require 'init-system)
+
+(require 'init-ui)
+
+(require 'init-hydra)
 (require 'init-built-in)
 (require 'init-tool)
-(require 'init-ui)
 
 (provide 'init)
 
