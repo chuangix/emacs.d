@@ -9,6 +9,8 @@
   (add-to-list 'load-path (file-name-as-directory dir))
   (add-to-list 'load-path (file-name-as-directory (expand-file-name "lang" dir))))
 
+(setq custom-file (locate-user-emacs-file "custom.el"))
+
 ;; (require 'use-proxy)
 
 (require 'package)
