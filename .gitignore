@@ -13,3 +13,4 @@
 elpa/
 var/
 .session
+custom.el
