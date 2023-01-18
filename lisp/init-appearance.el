@@ -6,7 +6,10 @@
 
 (when (or (eq system-type 'ms-doc)
           (eq system-type 'windows-nt))
-  (setq  w32-recognize-altgr nil))
+  (setq w32-recognize-altgr nil)
+  (set-face-attribute 'default nil
+                      :font "Consolas"
+                      :height 110))
 
 (setq-default indent-tabs-mode nil)
 (setq inhibit-compacting-font-caches t
