@@ -38,8 +38,6 @@
 ;(require 'init-yasnippet)
 ;(require 'init-misc)
 
-(require 'init-system)
-
 (require 'init-hydra)
 (require 'init-tool)
 
