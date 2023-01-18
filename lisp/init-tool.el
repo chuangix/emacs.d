@@ -107,6 +107,11 @@ Up^^             Down^^           Miscellaneous           % 2(mc/num-cursors) cu
   :ensure t
   :hook (after-init . google-this-mode))
 
+(use-package restart-emacs
+  :ensure t
+  :bind
+  ("C-x C" . restart-emacs))
+
 (provide 'init-tool)
 
 ;;; init-tool.el ends here
