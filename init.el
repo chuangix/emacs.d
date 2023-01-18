@@ -1,9 +1,6 @@
-;;; init.el --- The main entry for emacs -*- lexical-binding: t -*-
+;;; -*- lexical-binding: t -*-
 
-(setq gc-cons-threshold most-positive-fixnum
-      gc-cons-percentage 0.6)
-
-(setq read-process-output-max (* 4 1024 1024))
+(setq gc-cons-threshold most-positive-fixnum)
 
 (let ((dir (locate-user-emacs-file "lisp")))
   (add-to-list 'load-path (file-name-as-directory dir))
@@ -33,14 +30,17 @@
   :ensure t
   :demand t)
 
+;(require 'init-essential)
+(require 'init-appearance)
+;(require 'init-project)
+;(require 'init-helm)
+;(require 'init-company)
+;(require 'init-yasnippet)
+;(require 'init-misc)
+
 (require 'init-system)
 
-(require 'init-ui)
-
 (require 'init-hydra)
-(require 'init-built-in)
 (require 'init-tool)
 
 (provide 'init)
-
-;;; init.el ends here
