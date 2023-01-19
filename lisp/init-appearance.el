@@ -1,7 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
-(when (or (eq system-type 'ms-doc)
-          (eq system-type 'windows-nt))
+(when (memq system-type '(ms-doc windows-nt cygwin))
   (set-face-attribute 'default nil
                       :font "Consolas"
                       :height 110))

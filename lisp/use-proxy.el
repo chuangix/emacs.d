@@ -1,4 +1,4 @@
-;;; use-proxy.el --- The proxy settings -*- lexical-binding: t -*-
+;;; -*- lexical-binding: t -*-
 
 (setq url-proxy-services
       '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
@@ -11,5 +11,3 @@
                         (base64-encode-string "ma-dch:QWERqwer1!")))))
 
 (provide 'use-proxy)
-
-;;; use-proxy.el ends here

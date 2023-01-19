@@ -6,11 +6,6 @@
   :config (which-key-setup-side-window-right)
   :custom (which-key-idle-delay 1.5))
 
-(use-package session
-  :ensure t
-  :config (session-initialize)
-  :custom (desktop-save-mode t))
-
 (use-package elscreen
   :ensure t)
 
@@ -24,25 +19,12 @@
    ("M-g l" . avy-goto-line))
   :custom
   (avy-background t)
-  (avy-all-windows nil)
+  (avy-all-windows t)
   (avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
-
-(use-package ace-window
-  :ensure t
-  :bind
-  (("C-x o"   . ace-window))
-  (("C-x C-o" . ace-swap-window))
-  :custom
-  (aw-ignore-current t)
-  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
 
 (use-package fanyi
   :ensure t
   :commands fanyi-dwim fanyi-dwim2)
-
-(use-package undo-tree
-  :ensure t
-  :hook (after-init . global-undo-tree-mode))
 
 (use-package good-scroll
   :ensure t
@@ -85,15 +67,6 @@ Up^^             Down^^           Miscellaneous           % 2(mc/num-cursors) cu
 	  ("<down-mouse-1>" ignore)
 	  ("<drag-mouse-1>" ignore)
 	  ("q" nil)))
-
-(use-package google-this
-  :ensure t
-  :hook (after-init . google-this-mode))
-
-(use-package restart-emacs
-  :ensure t
-  :bind
-  ("C-x C" . restart-emacs))
 
 (provide 'init-tool)
 
