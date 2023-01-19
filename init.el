@@ -20,9 +20,7 @@
 (eval-and-compile
   (setq use-package-always-ensure nil)
   (setq use-package-always-defer nil)
-  (setq use-package-always-demand nil)
-  (setq use-package-expand-minimally nil)
-  (setq use-package-enable-imenu-support t))
+  (setq use-package-always-demand nil))
 (eval-when-compile
   (require 'use-package))
 
@@ -30,15 +28,29 @@
   :ensure t
   :demand t)
 
-;(require 'init-essential)
-(require 'init-appearance)
-;(require 'init-project)
-;(require 'init-helm)
-;(require 'init-company)
-;(require 'init-yasnippet)
-;(require 'init-misc)
-
+(require 'init-essential)
+;;(require 'init-evil)
 (require 'init-hydra)
+(require 'init-appearance)
+;;(require 'init-project)
+;;(require 'init-vc)
+;;(require 'init-avy)
+;;(require 'init-ivy)
+;;(require 'init-company)
+;;(require 'init-yasnippet)
+;;(require 'init-flyspell)
+;;(require 'init-flymake)
+;;(require 'init-lang-c)
+;;(require 'init-lang-cpp)
+;;(require 'init-lang-java)
+;;(require 'init-lang-go)
+;;(require 'init-lang-rust)
+;;(require 'init-lang-elisp)
+;;(require 'init-lang-haskell)
+;;(require 'init-lang-javascript)
+;;(require 'init-lang-typescript)
+;;(require 'init-misc)
+
 (require 'init-tool)
 
 (provide 'init)

@@ -1,4 +1,4 @@
-;;; init-hydra.el --- The hydra initialization -*- lexical-binding: t -*-
+;;; -*- lexical-binding: t -*-
 
 (use-package hydra
   :ensure t)
@@ -8,5 +8,3 @@
   :after hydra)
 
 (provide 'init-hydra)
-
-;;; init-hydra.el ends here

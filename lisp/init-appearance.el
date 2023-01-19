@@ -1,27 +1,15 @@
 ;;; -*- lexical-binding: t -*-
 
-(when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'none))
-
 (when (or (eq system-type 'ms-doc)
           (eq system-type 'windows-nt))
-  (setq w32-recognize-altgr nil)
   (set-face-attribute 'default nil
                       :font "Consolas"
                       :height 110))
 
-(setq-default indent-tabs-mode nil)
 (setq inhibit-compacting-font-caches t
-      load-prefer-newer t
-      visible-bell t
-      create-lockfiles nil
-      display-raw-bytes-as-hex t)
+      visible-bell t)
 
 (setq inhibit-startup-screen t)
-
-(setq make-backup-files nil
-      auto-save-default nil)
 
 (use-package frame
   :config
@@ -53,10 +41,6 @@
   :when (display-graphic-p)
   :config
   (global-hl-line-mode 1))
-
-(use-package saveplace
-  :config
-  (save-place-mode 1))
 
 (use-package emacs
   :unless (display-graphic-p)

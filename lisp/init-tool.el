@@ -36,26 +36,9 @@
   (aw-ignore-current t)
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
 
-(use-package helm
-  :ensure t
-  :bind
-  (("M-x"     . helm-M-x)
-   ("C-x C-f" . helm-find-files)
-   ("M-y"     . helm-show-kill-ring)))
-
-(use-package helm-descbinds
-  :after helm
-  :ensure t)
-
 (use-package fanyi
   :ensure t
   :commands fanyi-dwim fanyi-dwim2)
-
-(use-package mwim
-  :ensure t
-  :bind
-  ("C-a" . mwim-beginning-of-code-or-line)
-  ("C-e" . mwim-end-of-code-or-line))
 
 (use-package undo-tree
   :ensure t
