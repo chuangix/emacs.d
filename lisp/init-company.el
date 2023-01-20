@@ -5,25 +5,19 @@
 (use-package company
   :ensure t
   :diminish
-  :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
-  :hook (after-init . global-company-mode)
-  :config (setq company-dabbrev-code-everywhere t
-		company-dabbrev-code-modes t
-		company-dabbrev-code-other-buffers 'all
-		company-dabbrev-downcase nil
-		company-dabbrev-ignore-case t
-		company-dabbrev-other-buffers 'all
-		company-require-match nil
-		company-minimum-prefix-length 1
-		company-show-numbers t
-		company-tooltip-limit 20
-		company-idle-delay 0
-		company-echo-delay 0
-		company-tooltip-offset-display 'scrollbar
-		company-begin-commands '(self-insert-command))
-  (eval-after-load 'company
-    '(add-to-list 'company-backends
-                  '(company-abbrev company-yasnippet company-capf))))
+  :config
+  (global-company-mode)
+  (setq company-minimum-prefix-length 1)
+  (setq company-tooltip-align-annotations t)
+  (setq company-idle-delay 0.0)
+  (setq company-show-quick-access t)
+  (setq company-selection-wrap-around t)
+  (setq company-transformers '(company-sort-by-occurrence)))
+
+(use-package company-box
+  :ensure t
+  :if window-system
+  :hook (company-mode . company-box-mode))
 
 (provide 'init-company)
 
