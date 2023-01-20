@@ -2,7 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package amx
+  :ensure t)
+
 (use-package ivy
+  :after amx
   :ensure t
   :diminish
   :hook (after-init . ivy-mode)
@@ -15,7 +19,7 @@
                                 (t . ivy--regex-fuzzy))))
 
 (use-package counsel
-  :after (ivy)
+  :after ivy
   :ensure t
   :bind
   (("M-x" . counsel-M-x)
