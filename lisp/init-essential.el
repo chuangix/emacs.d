@@ -7,8 +7,6 @@
 (when (memq system-type '(ms-doc windows-nt cygwin))
   (setq w32-recognize-altgr nil))
 
-(prefer-coding-system 'utf-8)
-
 (setq-default indent-tabs-mode nil)
 
 (setq create-lockfiles nil
@@ -44,7 +42,7 @@
   ("<M-down>" . move-dup-move-lines-down))
 
 (use-package simple
-  :hook (after-init . auto-save-visited-mode)
+  :hook (after-init . auto-save-visited-mode))
 
 (use-package restart-emacs
   :ensure t
