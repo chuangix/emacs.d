@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; init.el --- Essential Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -24,14 +26,13 @@
 (setq make-backup-files nil
       auto-save-default nil)
 
-(use-package simple
-  :hook (after-init . auto-save-visited-mode))
+(use-package files
+  :config
+  (auto-save-visited-mode 1))
 
 (use-package recentf
-  :hook (after-init . recentf-mode))
-
-(use-package diminish
-  :ensure t)
+  :config
+  (recentf-mode 1))
 
 (use-package good-scroll
   :ensure t
@@ -71,3 +72,5 @@
   ("C-x C" . restart-emacs))
 
 (provide 'init-essential)
+
+;;; init-essential.el end

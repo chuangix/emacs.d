@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; init.el --- Entry of Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (setq gc-cons-threshold most-positive-fixnum)
 
@@ -28,18 +30,27 @@
   :ensure t
   :demand t)
 
+(use-package diminish
+  :ensure t)
+
+(use-package hydra
+  :ensure t)
+
+(use-package use-package-hydra
+  :ensure t
+  :after hydra)
+
 (require 'init-essential)
 ;; (require 'init-evil)
-(require 'init-hydra)
 (require 'init-appearance)
+;; (require 'init-org)
 ;; (require 'init-projectile)
 ;; (require 'init-magit)
 (require 'init-avy)
 (require 'init-ivy)
 (require 'init-company)
+(require 'init-flymake)
 ;; (require 'init-yasnippet)
-;; (require 'init-flyspell)
-;; (require 'init-flymake)
 ;; (require 'init-lang-c)
 ;; (require 'init-lang-cpp)
 ;; (require 'init-lang-java)
@@ -49,7 +60,8 @@
 ;; (require 'init-lang-haskell)
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
-;; (require 'init-org)
 (require 'init-misc)
 
 (provide 'init)
+
+;;; init.el ends here
