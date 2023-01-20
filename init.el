@@ -36,7 +36,7 @@
 ;; (require 'init-vc)
 ;; (require 'init-avy)
 (require 'init-ivy)
-;; (require 'init-company)
+(require 'init-company)
 ;; (require 'init-yasnippet)
 ;; (require 'init-flyspell)
 ;; (require 'init-flymake)
@@ -49,6 +49,7 @@
 ;; (require 'init-lang-haskell)
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
+;; (require 'init-org)
 ;; (require 'init-misc)
 
 (require 'init-tool)
