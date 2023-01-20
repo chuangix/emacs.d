@@ -34,6 +34,11 @@
   :config
   (recentf-mode 1))
 
+(use-package autorevert
+  :diminish
+  :config
+  (global-auto-revert-mode 1))
+
 (use-package good-scroll
   :ensure t
   :hook (after-init . good-scroll-mode))
@@ -53,6 +58,7 @@
 
 (use-package highlight-symbol
   :ensure t
+  :diminish
   :config
   (highlight-symbol-mode)
   :bind

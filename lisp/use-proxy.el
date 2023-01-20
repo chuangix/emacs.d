@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; use-proxy.el --- Enable Proxy -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (setq url-proxy-services
       '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
@@ -11,3 +13,5 @@
                         (base64-encode-string "ma-dch:QWERqwer1!")))))
 
 (provide 'use-proxy)
+
+;;; use-proxy.el ends here

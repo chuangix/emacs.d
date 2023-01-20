@@ -15,7 +15,9 @@
   (setq company-transformers '(company-sort-by-occurrence)))
 
 (use-package company-box
+  :after company
   :ensure t
+  :diminish
   :if window-system
   :hook (company-mode . company-box-mode))
 
