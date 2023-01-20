@@ -51,8 +51,8 @@
 	  sml/theme 'respectful)
     (sml/setup)))
 
-(use-package diminish
-  :ensure t)
+(use-package eldoc
+  :diminish)
 
 (use-package emacs
   :unless (display-graphic-p)

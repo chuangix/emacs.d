@@ -24,8 +24,18 @@
 (setq make-backup-files nil
       auto-save-default nil)
 
-(use-package eldoc
-   :diminish)
+(use-package simple
+  :hook (after-init . auto-save-visited-mode))
+
+(use-package recentf
+  :hook (after-init . recentf-mode))
+
+(use-package diminish
+  :ensure t)
+
+(use-package good-scroll
+  :ensure t
+  :hook (after-init . good-scroll-mode))
 
 (use-package hungry-delete
   :ensure t
@@ -47,12 +57,6 @@
   :config
   (setq undo-tree-visualizer-timestamps t
         undo-tree-auto-save-history t))
-
-(use-package simple
-  :hook (after-init . auto-save-visited-mode))
-
-(use-package recentf
-  :hook (after-init . recentf-mode))
 
 (use-package session
   :ensure t

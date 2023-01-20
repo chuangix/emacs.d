@@ -52,6 +52,4 @@
 ;; (require 'init-org)
 (require 'init-misc)
 
-(require 'init-tool)
-
 (provide 'init)
