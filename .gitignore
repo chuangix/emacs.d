@@ -12,5 +12,6 @@
 
 elpa/
 var/
+server/
 .session
 custom.el
