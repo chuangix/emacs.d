@@ -2,7 +2,7 @@
 
 (use-package company
   :ensure t
-  :diminish (company-mode " Cmp.")
+  :diminish
   :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
   :hook (after-init . global-company-mode)
   :config (setq company-dabbrev-code-everywhere t

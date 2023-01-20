@@ -2,6 +2,7 @@
 
 (use-package ivy
   :ensure t
+  :diminish
   :hook (after-init . ivy-mode)
   :config
   (ivy-mode 1)
@@ -9,7 +10,8 @@
 	ivy-initial-inputs-alist nil
 	ivy-count-format "%d/%d "
 	enable-recursive-minibuffers t
-	ivy-re-builders-alist '((t . ivy--regex-ignore-order))))
+	ivy-re-builders-alist '((swiper . ivy--regex-plus)
+                                (t . ivy--regex-fuzzy))))
 
 (use-package counsel
   :after (ivy)

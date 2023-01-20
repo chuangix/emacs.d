@@ -43,6 +43,17 @@
   :config
   (global-hl-line-mode 1))
 
+(use-package smart-mode-line
+  :ensure t
+  :config
+  (progn
+    (setq sml/no-confirm-load-theme t
+	  sml/theme 'respectful)
+    (sml/setup)))
+
+(use-package diminish
+  :ensure t)
+
 (use-package emacs
   :unless (display-graphic-p)
   :config (load-theme 'leuven t))

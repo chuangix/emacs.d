@@ -24,6 +24,9 @@
 (setq make-backup-files nil
       auto-save-default nil)
 
+(use-package eldoc
+   :diminish)
+
 (use-package hungry-delete
   :ensure t
   :bind (("C-c DEL" . hungry-delete-backward)
@@ -31,6 +34,7 @@
 
 (use-package move-dup
   :ensure t
+  :diminish
   :hook (after-init . global-move-dup-mode)
   :bind
   ("<M-up>" . move-dup-move-lines-up)
@@ -38,6 +42,7 @@
 
 (use-package undo-tree
   :ensure t
+  :diminish
   :hook (after-init . global-undo-tree-mode)
   :config
   (setq undo-tree-visualizer-timestamps t

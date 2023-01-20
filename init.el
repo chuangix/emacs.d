@@ -34,7 +34,7 @@
 (require 'init-appearance)
 ;; (require 'init-projectile)
 ;; (require 'init-magit)
-;; (require 'init-avy)
+(require 'init-avy)
 (require 'init-ivy)
 (require 'init-company)
 ;; (require 'init-yasnippet)
@@ -50,7 +50,7 @@
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
 ;; (require 'init-org)
-;; (require 'init-misc)
+(require 'init-misc)
 
 (require 'init-tool)
 

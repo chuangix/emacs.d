@@ -1,39 +1,15 @@
 ;;; init-tool.el --- The basic settings -*- lexical-binding: t -*-
 
-(use-package which-key
-  :ensure t
-  :hook (after-init . which-key-mode)
-  :config (which-key-setup-side-window-right)
-  :custom (which-key-idle-delay 1.5))
-
 (use-package elscreen
   :ensure t)
 
 (use-package centaur-tabs
   :ensure t)
 
-(use-package avy
-  :ensure t
-  :bind
-  (("M-g c" . avy-goto-char-timer)
-   ("M-g l" . avy-goto-line))
-  :custom
-  (avy-background t)
-  (avy-all-windows t)
-  (avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p)))
-
-(use-package fanyi
-  :ensure t
-  :commands fanyi-dwim fanyi-dwim2)
-
 (use-package good-scroll
   :ensure t
   :if window-system
   :hook (after-init . good-scroll-mode))
-
-(use-package smart-mode-line
-  :ensure t
-  :hook (after-init . sml/setup))
 
 (use-package multiple-cursors
   :ensure t
