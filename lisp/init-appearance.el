@@ -45,13 +45,9 @@
   :config
   (global-hl-line-mode 1))
 
-(use-package smart-mode-line
-  :ensure t
+(use-package powerline
   :config
-  (progn
-    (setq sml/no-confirm-load-theme t
-	  sml/theme 'respectful)
-    (sml/setup)))
+  (powerline-default-theme))
 
 (use-package eldoc
   :diminish)
