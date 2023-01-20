@@ -1,5 +1,14 @@
 ;;; -*- lexical-binding: t -*-
 
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+
+(use-package mule
+  :config
+  (progn
+    (set-terminal-coding-system 'utf-8)
+    (set-keyboard-coding-system 'utf-8)))
+
 (when (eq system-type 'darwin)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'none))
