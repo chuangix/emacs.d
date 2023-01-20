@@ -51,6 +51,14 @@
   ("<M-up>" . move-dup-move-lines-up)
   ("<M-down>" . move-dup-move-lines-down))
 
+(use-package highlight-symbol
+  :ensure t
+  :config
+  (highlight-symbol-mode)
+  :bind
+  (("<f3>" . highlight-symbol)
+   ("C-<f3>" . highlight-symbol-remove-all)))
+
 (use-package undo-tree
   :ensure t
   :diminish

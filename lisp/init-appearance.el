@@ -40,6 +40,10 @@
   :config
   (setq show-paren-when-point-in-periphery t))
 
+(use-package rainbow-delimiters
+  :ensure t
+  :hook (prog-mode . rainbow-delimiters-mode))
+
 (use-package hl-line
   :when (display-graphic-p)
   :config

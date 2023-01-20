@@ -44,7 +44,7 @@
 ;; (require 'init-evil)
 (require 'init-appearance)
 ;; (require 'init-org)
-;; (require 'init-projectile)
+(require 'init-project)
 ;; (require 'init-magit)
 (require 'init-avy)
 (require 'init-ivy)
