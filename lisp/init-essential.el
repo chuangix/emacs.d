@@ -46,6 +46,9 @@
 (use-package simple
   :hook (after-init . auto-save-visited-mode))
 
+(use-package recentf
+  :hook (after-init . recentf-mode))
+
 (use-package session
   :ensure t
   :config

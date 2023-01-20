@@ -1,14 +1,16 @@
 ;;; -*- lexical-binding: t -*-
 
-(when (memq system-type '(ms-doc windows-nt cygwin))
-  (set-face-attribute 'default nil
-                      :font "Consolas"
-                      :height 110))
+(setq inhibit-startup-screen t)
 
 (setq inhibit-compacting-font-caches t
       visible-bell t)
 
-(setq inhibit-startup-screen t)
+(use-package faces
+  :if (memq system-type '(ms-doc windows-nt cygwin))
+  :config
+  (set-face-attribute 'default nil
+                      :font "Consolas"
+                      :height 110))
 
 (use-package frame
   :config
