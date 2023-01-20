@@ -1,4 +1,10 @@
-;;; -*- lexical-binding: t -*-
+;;; init-misc --- Miscellaneous Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
+(use-package flycheck
+  :ensure t
+  :hook (prog-mode . flycheck-mode))
 
 (use-package which-key
   :ensure t
@@ -53,3 +59,5 @@ Up^^             Down^^           Miscellaneous           % 2(mc/num-cursors) cu
   :ensure t)
 
 (provide 'init-misc)
+
+;;; init-misc.el ends here

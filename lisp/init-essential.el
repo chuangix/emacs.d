@@ -1,4 +1,4 @@
-;;; init.el --- Essential Configuration -*- lexical-binding: t -*-
+;;; init-essential.el --- Essential Configuration -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -73,4 +73,4 @@
 
 (provide 'init-essential)
 
-;;; init-essential.el end
+;;; init-essential.el ends here

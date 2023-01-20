@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; init-appearance.el --- Appearance Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (setq inhibit-startup-screen t)
 
@@ -66,3 +68,5 @@
   (doom-themes-org-config))
 
 (provide 'init-appearance)
+
+;;; init-appearance.el ends here

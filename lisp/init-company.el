@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; init-company.el --- Company Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package company
   :ensure t
@@ -24,3 +26,5 @@
                   '(company-abbrev company-yasnippet company-capf))))
 
 (provide 'init-company)
+
+;;; init-company.el ends here

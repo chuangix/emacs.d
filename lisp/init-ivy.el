@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; init-ivy.el --- Ivy Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package ivy
   :ensure t
@@ -6,8 +8,7 @@
   :hook (after-init . ivy-mode)
   :config
   (ivy-mode 1)
-  (setq ivy-use-virtual-buffert t
-	ivy-initial-inputs-alist nil
+  (setq ivy-initial-inputs-alist nil
 	ivy-count-format "%d/%d "
 	enable-recursive-minibuffers t
 	ivy-re-builders-alist '((swiper . ivy--regex-plus)
@@ -33,3 +34,5 @@
    ("C-r" . swiper-isearch-backward)))
 
 (provide 'init-ivy)
+
+;;; init-ivy.el ends here

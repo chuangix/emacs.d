@@ -1,4 +1,6 @@
-;;; -*- lexical-binding: t -*-
+;;; init-avy.el --- Avy Configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
 (use-package avy
   :ensure t
@@ -15,3 +17,5 @@
   :ensure t)
 
 (provide 'init-avy)
+
+;;; init-avy.el ends here

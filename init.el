@@ -49,7 +49,7 @@
 (require 'init-avy)
 (require 'init-ivy)
 (require 'init-company)
-(require 'init-flymake)
+;; (require 'init-flymake)
 ;; (require 'init-yasnippet)
 ;; (require 'init-lang-c)
 ;; (require 'init-lang-cpp)
