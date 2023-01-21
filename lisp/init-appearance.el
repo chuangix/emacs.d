@@ -4,15 +4,21 @@
 
 (setq inhibit-startup-screen t)
 
-(setq inhibit-compacting-font-caches t
-      visible-bell t)
+(setq visible-bell t)
+
+(setq inhibit-compacting-font-caches t)
 
 (use-package faces
   :if (memq system-type '(ms-doc windows-nt cygwin))
   :config
   (set-face-attribute 'default nil
                       :font "Consolas"
-                      :height 110))
+                      :height 110)
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+		      charset (font-spec
+                               :family "微软雅黑"
+                               :size 20))))
 
 (use-package frame
   :config

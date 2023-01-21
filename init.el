@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq gc-cons-threshold most-positive-fixnum)
+(setq gc-cons-threshold most-positive-fixnum
+      gc-cons-percentage 0.6)
 
 (let ((dir (locate-user-emacs-file "lisp")))
   (add-to-list 'load-path (file-name-as-directory dir))
