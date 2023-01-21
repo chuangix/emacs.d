@@ -14,6 +14,9 @@
 (use-package magit
   :ensure t)
 
+(use-package treemacs
+  :ensure t)
+
 (provide 'init-project)
 
 ;;; init-project.el ends here
