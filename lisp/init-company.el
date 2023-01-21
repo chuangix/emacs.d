@@ -18,7 +18,7 @@
   :after company
   :ensure t
   :diminish
-  :if window-system
+  :if display-graphic-p
   :hook (company-mode . company-box-mode))
 
 (provide 'init-company)
