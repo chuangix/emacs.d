@@ -9,7 +9,6 @@
   (with-no-warnings
     (defconst ccls-args nil)
     (defconst clangd-args '("-j=2"
-                            "--malloc-trim"
                             "--background-index"
                             "--clang-tidy"
                             "--completion-style=bundled"
