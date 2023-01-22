@@ -52,7 +52,6 @@
 ;; (require 'init-yasnippet)
 (require 'init-lsp)
 ;; (require 'init-lang-c)
-
 (require 'init-lang-cpp)
 ;; (require 'init-lang-java)
 ;; (require 'init-lang-go)
