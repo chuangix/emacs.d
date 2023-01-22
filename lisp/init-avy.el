@@ -1,5 +1,10 @@
 ;;; init-avy.el --- Avy Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the configuration all about avy and some plugins depending
+;; on avy.
+
 ;;; Code:
 
 (use-package avy

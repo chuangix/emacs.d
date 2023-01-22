@@ -1,5 +1,10 @@
 ;;; init-appearance.el --- Appearance Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the configuration about appearance including font,
+;; mode-line, theme, etc.
+
 ;;; Code:
 
 (setq inhibit-startup-screen t)

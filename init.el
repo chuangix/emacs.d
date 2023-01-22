@@ -1,5 +1,10 @@
 ;;; init.el --- Entry of Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the first entry of all the configuration, and some common
+;; configuration used by lisp/ is also performed here.
+
 ;;; Code:
 
 (setq gc-cons-threshold most-positive-fixnum

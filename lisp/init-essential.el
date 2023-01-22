@@ -1,5 +1,10 @@
 ;;; init-essential.el --- Essential Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the essential configuration which should be always used by
+;; anyone who want to use this configuration suite .emacs.d.
+
 ;;; Code:
 
 (prefer-coding-system 'utf-8)

@@ -1,5 +1,10 @@
 ;;; use-proxy.el --- Enable Proxy -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is a toggle file for proxy, which can be called with require
+;; from init.el by users manually.
+
 ;;; Code:
 
 (setq url-proxy-services

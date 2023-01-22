@@ -1,5 +1,10 @@
 ;;; init-ivy.el --- Ivy Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the configuration all about ivy and some plugins depending
+;; on ivy.
+
 ;;; Code:
 
 (use-package amx

@@ -1,5 +1,10 @@
 ;;; init-misc.el --- Miscellaneous Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is some miscellaneous configuration which are recommended and
+;; optional for users.
+
 ;;; Code:
 
 (use-package which-key

@@ -1,5 +1,10 @@
-;;; init-misc.el --- Flycheck Configuration -*- lexical-binding: t -*-
+;;; init-flycheck.el --- Flycheck Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the configuration all about flycheck and some plugins
+;; depending on flycheck.
+
 ;;; Code:
 
 (use-package flycheck

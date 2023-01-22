@@ -1,5 +1,10 @@
 ;;; init-lsp.el --- LSP Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the configuration all about lsp and some plugins depending
+;; on lsp.
+
 ;;; Code:
 
 (use-package lsp-mode

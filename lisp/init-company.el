@@ -1,5 +1,10 @@
 ;;; init-company.el --- Company Configuration -*- lexical-binding: t -*-
+
 ;;; Commentary:
+
+;; This is the configuration all about company and some plugins
+;; depending on company.
+
 ;;; Code:
 
 (use-package company
