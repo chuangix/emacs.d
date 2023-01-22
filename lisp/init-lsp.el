@@ -18,6 +18,11 @@
   :ensure t
   :commands lsp-ui-mode)
 
+(use-package helm-lsp
+  :after lsp-mode
+  :ensure t
+  :commands helm-lsp-workspace-symbol)
+
 (use-package lsp-ivy
   :after lsp-mode
   :ensure t
