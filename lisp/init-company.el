@@ -16,9 +16,9 @@
 
 (use-package company-box
   :after company
+  :when (display-graphic-p)
   :ensure t
   :diminish
-  :if display-graphic-p
   :hook (company-mode . company-box-mode))
 
 (provide 'init-company)
