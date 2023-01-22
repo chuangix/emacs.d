@@ -21,6 +21,7 @@
 	ivy-count-format "%d/%d "
 	enable-recursive-minibuffers t
 	ivy-re-builders-alist '((swiper . ivy--regex-plus)
+                                (swiper-isearch . ivy--regex-plus)
                                 (t . ivy--regex-fuzzy))))
 
 (use-package counsel
