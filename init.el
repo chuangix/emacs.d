@@ -52,7 +52,6 @@
 (require 'init-project)
 (require 'init-avy)
 (require 'init-ivy)
-;; (require 'init-helm)
 (require 'init-company)
 (require 'init-flycheck)
 ;; (require 'init-yasnippet)
