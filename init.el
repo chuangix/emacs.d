@@ -67,6 +67,8 @@
 ;; (require 'init-lang-typescript)
 (require 'init-misc)
 
+(require 'use-wakatime)
+
 (provide 'init)
 
 ;;; init.el ends here
