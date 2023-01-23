@@ -61,6 +61,7 @@
   (global-hl-line-mode 1))
 
 (use-package powerline
+  :ensure t
   :config
   (powerline-default-theme))
 
