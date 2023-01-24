@@ -66,8 +66,7 @@
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
 (require 'init-misc)
-
-(require 'use-wakatime)
+(require 'init-wakatime)
 
 (provide 'init)
 
