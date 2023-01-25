@@ -9,7 +9,7 @@
 
 (setq inhibit-startup-screen t)
 
-(setq visible-bell t)
+(setq ring-bell-function 'ignore)
 
 (setq inhibit-compacting-font-caches t)
 
