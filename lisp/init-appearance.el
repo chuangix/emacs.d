@@ -45,7 +45,8 @@
   :config
   (line-number-mode -1)
   (column-number-mode -1)
-  (size-indication-mode -1))
+  (size-indication-mode -1)
+  (toggle-truncate-lines -1))
 
 (use-package paren
   :config
