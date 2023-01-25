@@ -16,7 +16,7 @@
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
-;; (require 'use-proxy)
+(require 'check-proxy)
 
 (require 'package)
 (setq package-archives '(("gnu" . "http://mirrors.cloud.tencent.com/elpa/gnu/")

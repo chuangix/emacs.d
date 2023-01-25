@@ -16,3 +16,4 @@ server/
 .session
 custom.el
 **/flycheck_*
+proxy.txt
