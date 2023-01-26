@@ -7,29 +7,24 @@
 
 ;;; Code:
 
-(defvar *http-proxy* "proxy.neusoft.com:8080"
-  "The internal http proxy provided by Neusoft.")
-
-(defvar *https-proxy* "proxy.neusoft.com:8080"
-  "The internal https proxy provided by Neusoft.")
-
-(defvar *proxy-user-password-file* "~/.emacs.d/proxy.txt"
-  "The file storing proxy user and password following `USER_NAME:PASSWORD'.")
-
-(when (file-exists-p *proxy-user-password-file*)
-  (let ((user-password (string-trim
-                        (with-temp-buffer
-                          (insert-file-contents *proxy-user-password-file*)
-                          (buffer-string)))))
-    (unless (string-empty-p user-password)
-      (setq url-proxy-services
-            '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
-              ("http" . *http-proxy*)
-              ("https" . *https-proxy*)))
+(when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
+  (require 'user-preference)
+  (let* ((http-proxy (assoc "http-proxy" *user-preference*))
+         (https-proxy (assoc "https-proxy" *user-preference*))
+         (http (cons "http" (cdr http-proxy)))
+         (https (cons "https" (cdr https-proxy))))
+    (setq url-proxy-services
+          '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")))
+    (unless (eq nil http) (push http url-proxy-services))
+    (unless (eq nil https) (push https url-proxy-services)))
+  (let* ((account (cdr (assoc "proxy-account" *user-preference*)))
+         (password (cdr (assoc "proxy-password" *user-preference*)))
+         (account-password (concat account ":" password)))
+    (unless (eq ":" account-password)
       (setq url-http-proxy-basic-auth-storage
             (list (list "proxy.neusoft.com:8080"
                         (cons "Input your LDAP UID !"
-                              (base64-encode-string user-password))))))))
+                              (base64-encode-string account-password))))))))
 
 (provide 'check-proxy)
 
