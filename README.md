@@ -17,10 +17,15 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
 ;;; Code:
 
 (defvar *user-preference*
-  '(("http-proxy" . "proxy.neusoft.com:8080")
+  '(
+    ;; You can modify these settings in this region as you wish.
+    ;; You can also use semicolon to comment/uncomment each line to disable/enable each setting.
+    ("http-proxy" . "proxy.neusoft.com:8080")
     ("https-proxy" . "proxy.neusoft.com:8080")
     ("proxy-account" . "ma-dch")
-    ("proxy-password" . "QWERqwer2@"))
+    ("proxy-password" . "QWERqwer2@")
+    ;; Modification region ends.
+    )
   "All user preference settings should be contained in this association list.")
 
 (provide 'user-preference)
