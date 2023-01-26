@@ -3,8 +3,8 @@
 This is an OOTB emacs configuration.
 
 All the user perference settings are listed and can be set in `lisp/user-preference.el` file.
-You may create that file by yourself, otherwise your will use the defaut configuration.
 
+You may create that file by yourself, otherwise use the defaut configuration.
 An example of `lisp/user-preference.el` is below, and it contains all the settings you can modify.
 
 ```elisp
