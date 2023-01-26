@@ -18,19 +18,22 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
 
 (defvar *user-preference*
   '(
-    ;; MODIFICATION REGION BEGIN
+    ;;;;;;;;;; MODIFICATION REGION BEGIN ;;;;;;;;;;
     ;; You can use semicolon to comment/uncomment each setting of a line.
     ;; You can also modify the right side values of these settings as you wish.
     ;; However, NEVER modify the left side keys!!!
-    ("http-proxy" . "proxy.neusoft.com:8080")
-    ("https-proxy" . "proxy.neusoft.com:8080")
-    ("proxy-account" . "ma-dch")
-    ("proxy-password" . "QWERqwer2@")
-    ;; MODIFICATION REGION END
+    (wakatime-cli-executable . "c:/Users/chuan/Downloads/wakatime-cli-windows-amd64.exe")
+    (wakatime-api-key . "waka_12345678-abcd-abcd-abcd-1234567890ab")
+    ;; ("http-proxy" . "proxy.neusoft.com:8080")
+    ;; ("https-proxy" . "proxy.neusoft.com:8080")
+    ;; ("proxy-account" . "ma-dch")
+    ;; ("proxy-password" . "QWERqwer2@")
+    ;;;;;;;;;;; MODIFICATION REGION END ;;;;;;;;;;;
     )
   "All user preference settings should be contained in this association list.")
 
 (provide 'user-preference)
 
 ;;; user-preference.el ends here
+
 ```
