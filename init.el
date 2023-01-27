@@ -56,6 +56,7 @@
 (require 'init-avy)
 (require 'init-ivy)
 (require 'init-company)
+;; (require 'init-flyspell)
 (require 'init-flycheck)
 ;; (require 'init-yasnippet)
 (require 'init-lsp)
