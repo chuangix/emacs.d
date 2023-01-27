@@ -66,8 +66,12 @@
 ;; (require 'init-lang-rust)
 ;; (require 'init-lang-elisp)
 ;; (require 'init-lang-haskell)
+;; (require 'init-lang-perl)
+;; (require 'init-lang-python)
+;; (require 'init-lang-ruby)
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
+;; (require 'init-lang-franca-idl)
 (require 'init-misc)
 (require 'init-wakatime)
 
