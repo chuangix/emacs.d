@@ -23,8 +23,8 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
     ;;;; You can also modify the right side values of these settings as you wish.
     ;;;; However, NEVER modify the left side keys!!!
     ("editing-style" . "emacs") ;; There are 3 options: emacs, vim, cua.
-    ("wakatime-cli-executable" . "c:/Users/chuan/Downloads/wakatime-cli-windows-amd64.exe")
-    ("wakatime-api-key" . "XXXX")
+    ;; ("wakatime-cli-executable" . "c:/Users/chuan/Downloads/wakatime-cli-windows-amd64.exe")
+    ;; ("wakatime-api-key" . "XXXX")
     ;; ("http-proxy" . "proxy.neusoft.com:8080")
     ;; ("https-proxy" . "proxy.neusoft.com:8080")
     ;; ("proxy-account" . "ma-dch")
