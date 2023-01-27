@@ -8,7 +8,8 @@
 ;;; Code:
 
 (use-package projectile
-  :ensure t)
+  :ensure t
+  :diminish)
 
 (use-package counsel-projectile
   :ensure t
