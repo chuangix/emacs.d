@@ -80,13 +80,6 @@
   (load-theme 'doom-one t)
   (doom-themes-org-config))
 
-(if (daemonp)
-    (add-hook 'after-make-frame-functions
-        (lambda (frame)
-            (select-frame frame)
-            (load-theme 'doom-one t)))
-    (load-theme 'doom-one t))
-
 (provide 'init-appearance)
 
 ;;; init-appearance.el ends here
