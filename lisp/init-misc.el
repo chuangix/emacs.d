@@ -53,12 +53,6 @@ Up^^             Down^^           Miscellaneous           % 2(mc/num-cursors) cu
 	  ("<drag-mouse-1>" ignore)
 	  ("q" nil)))
 
-(use-package elscreen
-  :ensure t)
-
-(use-package centaur-tabs
-  :ensure t)
-
 (provide 'init-misc)
 
 ;;; init-misc.el ends here
