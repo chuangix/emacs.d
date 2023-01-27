@@ -10,7 +10,7 @@
   :ensure t
   :config
   (when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
-    (let ((cli-executable (cdr (assoc "wakatime-cli-excutable" *user-preference*)))
+    (let ((cli-executable (cdr (assoc "wakatime-cli-executable" *user-preference*)))
           (api-key (cdr (assoc "wakatime-api-key" *user-preference*))))
       (unless (or (eq nil cli-executable)
                   (eq nil api-key)
