@@ -9,22 +9,23 @@
 
 (when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
   (require 'user-preference)
-  (let* ((http-proxy (assoc "http-proxy" *user-preference*))
-         (https-proxy (assoc "https-proxy" *user-preference*))
-         (http (cons "http" (cdr http-proxy)))
-         (https (cons "https" (cdr https-proxy))))
-    (setq url-proxy-services
-          '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")))
-    (unless (eq nil http) (push http url-proxy-services))
-    (unless (eq nil https) (push https url-proxy-services)))
-  (let* ((account (cdr (assoc "proxy-account" *user-preference*)))
-         (password (cdr (assoc "proxy-password" *user-preference*)))
-         (account-password (concat account ":" password)))
-    (unless (eq ":" account-password)
-      (setq url-http-proxy-basic-auth-storage
+  (let ((http (alist-get 'https-proxy *user-preference*))
+         (https (alist-get 'https-proxy *user-preference*)))
+    (or (eq nil http)
+        (eq nil https)
+        (progn
+          (setq url-proxy-services ())
+          (push (cons "http" http) url-proxy-services)
+          (push (cons "https" https) url-proxy-services)
+          (push (cons "no_proxy" "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)") url-proxy-services))))
+  (let ((account (alist-get 'proxy-account *user-preference*))
+        (password (alist-get 'proxy-password *user-preference*)))
+    (or (eq nil account)
+        (eq nil password)
+        (setq url-http-proxy-basic-auth-storage
             (list (list "proxy.neusoft.com:8080"
                         (cons "Input your LDAP UID !"
-                              (base64-encode-string account-password))))))))
+                              (base64-encode-string (concat account ":" password)))))))))
 
 (provide 'check-proxy)
 
