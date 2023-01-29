@@ -25,6 +25,9 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
     (editing-style . "emacs") ;; There are 3 options: emacs, vim, cua.
     ;; (wakatime-cli-executable . "c:/Users/chuan/Downloads/wakatime-cli-windows-amd64.exe")
     ;; (wakatime-api-key . "XXXX")
+    ;; (org-graphviz-bin . "C:/Program Files/Graphviz/bin")
+    ;; (org-ditaa-jar . "C:/Users/chuan/Downloads/ditaa0_9/ditaa0_9.jar")
+    ;; (org-plantuml-jar . "C:/Users/chuan/Downloads/plantuml.1.2023.0.jar")
     ;; (http-proxy . "proxy.neusoft.com:8080")
     ;; (https-proxy . "proxy.neusoft.com:8080")
     ;; (proxy-account . "ma-dch")
