@@ -51,7 +51,7 @@
 
 (require 'init-essential)
 (require 'init-appearance)
-;; (require 'init-org)
+(require 'init-org)
 (require 'init-project)
 (require 'init-avy)
 (require 'init-ivy)
