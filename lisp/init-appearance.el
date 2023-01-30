@@ -7,6 +7,13 @@
 
 ;;; Code:
 
+(use-package doom-themes
+  :ensure t
+  :when (display-graphic-p)
+  :config
+  (load-theme 'doom-one t)
+  (doom-themes-org-config))
+
 (setq inhibit-startup-screen t)
 
 (setq ring-bell-function 'ignore)
@@ -61,24 +68,19 @@
   :config
   (global-hl-line-mode 1))
 
-(use-package powerline
-  :ensure t
-  :config
-  (powerline-default-theme))
-
-(use-package eldoc
-  :diminish)
-
 (use-package emacs
   :unless (display-graphic-p)
   :config (load-theme 'leuven t))
 
-(use-package doom-themes
+(use-package smart-mode-line
   :ensure t
-  :when (display-graphic-p)
   :config
-  (load-theme 'doom-one t)
-  (doom-themes-org-config))
+  (setq sml/no-confirm-load-theme t)
+  (setq sml/theme 'dark)
+  (sml/setup))
+
+(use-package eldoc
+  :diminish)
 
 (provide 'init-appearance)
 
