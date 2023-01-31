@@ -30,9 +30,9 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
     ;; (org-plantuml-jar . "C:/Users/chuan/Downloads/plantuml.1.2023.0.jar")
     ;; (clangd-executable . "C:/Program Files/LLVM/bin/clangd.exe")
     ;; (lldb-executalbe . "C:/Program Files/LLVM/bin/lldb-vscode.exe")
-    ;; (http-proxy . "proxy.neusoft.com:8080")
-    ;; (https-proxy . "proxy.neusoft.com:8080")
-    ;; (proxy-account . "ma-dch")
+    ;; (http-proxy . "proxy.XXXX.com:8080")
+    ;; (https-proxy . "proxy.XXXX.com:8080")
+    ;; (proxy-account . "XXXX")
     ;; (proxy-password . "XXXX")
     ;;;;;;;;;;; MODIFICATION REGION END ;;;;;;;;;;;
     )
