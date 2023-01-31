@@ -44,10 +44,6 @@
   :config
   (global-auto-revert-mode 1))
 
-(use-package good-scroll
-  :ensure t
-  :hook (after-init . good-scroll-mode))
-
 (use-package hungry-delete
   :ensure t
   :bind (("C-c DEL" . hungry-delete-backward)

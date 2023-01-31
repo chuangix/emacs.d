@@ -16,10 +16,6 @@
     (which-key-setup-side-window-right)
     (setq which-key-idle-delay 1.5)))
 
-(use-package fanyi
-  :ensure t
-  :commands fanyi-dwim fanyi-dwim2)
-
 (use-package multiple-cursors
   :ensure t
   :after hydra
