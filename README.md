@@ -2,7 +2,21 @@
 
 This is an OOTB emacs configuration.
 
-All user perference settings are listed and can be set in `lisp/user-preference.el` file.
+## More Quick Start
+
+I strongly recommend to use `emacsclient` command instead of `emacs` to start, which will speed up the progress for each new instance.
+
+For Linux users, set an alias as this in your ~/.bashrc file.
+
+```bash
+alias em='emacsclient -t -a ""'
+```
+
+For Windows user, please make `emacsclient.exe -t -a ""` as an executable.
+
+## User Preference Settings
+
+All user preference settings are listed and can be set in `lisp/user-preference.el` file.
 
 You may create that file by yourself, otherwise use default configuration.
 An example of `lisp/user-preference.el` is below, and it contains all the settings you can modify.
