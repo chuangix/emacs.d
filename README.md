@@ -12,7 +12,7 @@ For Linux users, set an alias as this in your ~/.bashrc file.
 alias em='emacsclient -t -a ""'
 ```
 
-For Windows user, please make `emacsclient.exe -t -a ""` as an executable.
+For Windows users, please make `emacsclient.exe -t -a ""` as an executable.
 
 ## User Preference Settings
 
