@@ -2,6 +2,24 @@
 
 This is an OOTB emacs configuration.
 
+## Installation
+
+```bash
+git clone https://github.com/chuangix/emacs.d ~/.emacs.d
+```
+
+or
+
+```bash
+git clone https://gitee.com/chuangix/emacs.d ~/.emacs.d
+```
+
+## Fonts
+
+Install all the fonts in directory `~/.emacs.d/font/`.
+
+## User Preference Settings
+
 All user preference settings are listed and can be set in `lisp/user-preference.el` file.
 
 You may create that file by yourself, otherwise use default configuration.
