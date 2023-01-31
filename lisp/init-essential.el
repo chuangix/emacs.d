@@ -77,9 +77,8 @@
 (use-package session
   :ensure t
   :config
-  (progn
-    (session-initialize)
-    (desktop-save-mode 1)))
+  (session-initialize)
+  (desktop-save-mode 1))
 
 (use-package restart-emacs
   :ensure t
