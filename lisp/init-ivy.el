@@ -7,12 +7,10 @@
 
 ;;; Code:
 
-(use-package amx
-  :ensure t)
+(use-package amx)
 
 (use-package ivy
   :after amx
-  :ensure t
   :diminish
   :hook (after-init . ivy-mode)
   :config
@@ -25,8 +23,6 @@
                                 (t . ivy--regex-fuzzy))))
 
 (use-package counsel
-  :after ivy
-  :ensure t
   :bind
   (("M-x" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)
@@ -34,8 +30,6 @@
    ("C-c g" . counsel-git)))
 
 (use-package swiper
-  :after ivy
-  :ensure t
   :config
   (setq swiper-action-recenter t
 	swiper-include-line-number-in-search t)

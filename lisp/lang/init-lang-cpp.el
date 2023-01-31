@@ -3,6 +3,7 @@
 ;;; Code:
 
 (use-package cc-mode
+  :ensure nil
   :mode ("\\.cc\\'\\|\\.cxx\\'\\|\\.cpp\\'\\|\\.hxx\\'\\|\\.hpp\\'" . c++-mode))
 
 (setq flycheck-clang-language-standard "c++11")
@@ -23,22 +24,18 @@
                                         "--header-insertion-decorators"))))
     (unless (eq nil lldb)
       (use-package dap-lldb
-        :after dap-mode
         :config
         (setq dap-lldb-debug-program '(lldb))
         (setq dap-lldb-debugged-program-function
 	      (lambda () (read-file-name "Select file to debug: ")))))))
 
 (use-package cmake-mode
-  :ensure t
   :mode (("CMakeLists\\.txt\\'" . cmake-mode)
          ("\\.cmake\\'" . cmake-mode))
   :bind (:map cmake-mode-map
               ("C-c d" . cmake-help)))
 
 (use-package cmake-font-lock
-  :after cmake-mode
-  :ensure t
   :hook (cmake-mode . cmake-font-lock-activate))
 
 (provide 'init-lang-cpp)

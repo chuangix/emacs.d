@@ -8,7 +8,6 @@
 ;;; Code:
 
 (use-package company
-  :ensure t
   :diminish
   :config
   (global-company-mode)
@@ -20,9 +19,7 @@
   (setq company-transformers '(company-sort-by-occurrence)))
 
 (use-package company-box
-  :after company
   :when (display-graphic-p)
-  :ensure t
   :diminish
   :hook (company-mode . company-box-mode))
 

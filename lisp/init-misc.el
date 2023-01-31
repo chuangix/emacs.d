@@ -8,7 +8,6 @@
 ;;; Code:
 
 (use-package which-key
-  :ensure t
   :diminish
   :hook (after-init . which-key-mode)
   :config
@@ -17,8 +16,6 @@
     (setq which-key-idle-delay 1.5)))
 
 (use-package multiple-cursors
-  :ensure t
-  :after hydra
   :bind
   (("C-x C-h m" . hydra-multiple-cursors/body)
    ("C-S-<mouse-1>" . mc/toggle-cursor-on-click))

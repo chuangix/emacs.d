@@ -7,7 +7,6 @@
 ;;; Code:
 
 (use-package wakatime-mode
-  :ensure t
   :config
   (when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
     (let ((cli-executable (alist-get 'wakatime-cli-executable *user-preference*))

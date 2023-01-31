@@ -7,21 +7,14 @@
 
 ;;; Code:
 
-(use-package projectile
-  :ensure t
-  :diminish)
+(use-package projectile :diminish)
 
 (use-package counsel-projectile
-  :ensure t
-  :after (projectile)
   :config
   (counsel-projectile-mode))
 
-(use-package magit
-  :ensure t)
-
-(use-package treemacs
-  :ensure t)
+(use-package magit)
+(use-package treemacs)
 
 (provide 'init-project)
 

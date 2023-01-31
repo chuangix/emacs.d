@@ -8,8 +8,6 @@
 ;;; Code:
 
 (use-package avy
-  :ensure t
-  :after hydra
   :config
   (setq avy-background t
         avy-all-windows t
@@ -29,9 +27,7 @@ _c_ Goto Char    _w_ Goto Word    _l_ Goto Line    _r_ Copy Region
           ("r" avy-copy-region :exit t)
           ("q" nil)))
 
-(use-package avy-zap
-  :after avy
-  :ensure t)
+(use-package avy-zap)
 
 (provide 'init-avy)
 

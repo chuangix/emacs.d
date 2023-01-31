@@ -7,50 +7,40 @@
 
 ;;; Code:
 
-(prefer-coding-system 'utf-8)
-(set-default-coding-systems 'utf-8)
-
-(use-package mule
-  :config
-  (progn
-    (set-terminal-coding-system 'utf-8)
-    (set-keyboard-coding-system 'utf-8)))
-
 (when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'none))
+  (setq mac-command-modifier 'meta
+        mac-option-modifier 'none))
 
 (when (memq system-type '(ms-doc windows-nt cygwin))
   (setq w32-recognize-altgr nil))
 
-(setq-default indent-tabs-mode nil)
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 
 (setq create-lockfiles nil
+      make-backup-files nil
+      auto-save-default nil
       display-raw-bytes-as-hex t)
 
-(setq make-backup-files nil
-      auto-save-default nil)
+(global-auto-revert-mode 1)
+(auto-save-visited-mode 1)
+(recentf-mode 1)
 
-(use-package files
+(use-package session
   :config
-  (auto-save-visited-mode 1))
+  (session-initialize)
+  (desktop-save-mode 1)
+  (setq desktop-load-locked-desktop t))
 
-(use-package recentf
-  :config
-  (recentf-mode 1))
-
-(use-package autorevert
-  :diminish
-  :config
-  (global-auto-revert-mode 1))
+(setq-default indent-tabs-mode nil)
 
 (use-package hungry-delete
-  :ensure t
   :bind (("C-c DEL" . hungry-delete-backward)
          ("C-c d" . hungry-delete-forward)))
 
 (use-package move-dup
-  :ensure t
   :diminish
   :hook (after-init . global-move-dup-mode)
   :bind
@@ -58,7 +48,6 @@
   ("<M-down>" . move-dup-move-lines-down))
 
 (use-package highlight-symbol
-  :ensure t
   :diminish
   :config
   (highlight-symbol-mode)
@@ -67,21 +56,13 @@
    ("C-<f3>" . highlight-symbol-remove-all)))
 
 (use-package undo-tree
-  :ensure t
   :diminish
   :hook (after-init . global-undo-tree-mode)
   :config
   (setq undo-tree-visualizer-timestamps t
         undo-tree-auto-save-history t))
 
-(use-package session
-  :ensure t
-  :config
-  (session-initialize)
-  (desktop-save-mode 1))
-
 (use-package restart-emacs
-  :ensure t
   :bind
   ("C-x C" . restart-emacs))
 

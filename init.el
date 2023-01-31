@@ -27,25 +27,16 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (eval-and-compile
-  (setq use-package-always-ensure nil)
+  (setq use-package-always-ensure t)
   (setq use-package-always-defer nil)
   (setq use-package-always-demand nil))
 (eval-when-compile
   (require 'use-package))
 
-(use-package no-littering
-  :ensure t
-  :demand t)
-
-(use-package diminish
-  :ensure t)
-
-(use-package hydra
-  :ensure t)
-
-(use-package use-package-hydra
-  :ensure t
-  :after hydra)
+(use-package no-littering :demand t)
+(use-package diminish)
+(use-package hydra)
+(use-package use-package-hydra)
 
 (require 'init-essential)
 (require 'init-appearance)
@@ -71,8 +62,8 @@
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
 ;; (require 'init-lang-franca-idl)
-(require 'init-misc)
 (require 'init-wakatime)
+(require 'init-misc)
 
 (provide 'init)
 
