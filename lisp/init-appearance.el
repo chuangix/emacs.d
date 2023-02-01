@@ -59,7 +59,11 @@
         (dashboard-modify-heading-icons '((recents . "file-text")
                                           (bookmarks . "book")))
         (setq dashboard-set-navigator t)
-        (dashboard-setup-startup-hook)))
+        (dashboard-setup-startup-hook))
+      (use-package dashboard-hackernews)
+      (use-package dashboard-ls)
+      (use-package dashboard-project-status)
+      )
   (load-theme 'leuven t))
 
 (use-package rainbow-delimiters
