@@ -62,8 +62,7 @@
         (dashboard-setup-startup-hook))
       (use-package dashboard-hackernews)
       (use-package dashboard-ls)
-      (use-package dashboard-project-status)
-      )
+      (use-package dashboard-project-status))
   (load-theme 'leuven t))
 
 (use-package rainbow-delimiters

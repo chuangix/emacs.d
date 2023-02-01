@@ -56,10 +56,6 @@
   (setq undo-tree-visualizer-timestamps t
         undo-tree-auto-save-history t))
 
-(use-package restart-emacs
-  :bind
-  ("C-x C" . restart-emacs))
-
 (provide 'init-essential)
 
 ;;; init-essential.el ends here
