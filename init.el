@@ -22,7 +22,7 @@
 (setq package-archives '(("gnu" . "http://mirrors.cloud.tencent.com/elpa/gnu/")
                          ("melpa" . "http://mirrors.cloud.tencent.com/elpa/melpa/")
                          ("nongnu" . "http://mirrors.cloud.tencent.com/elpa/nongnu/")))
-(package-initialize)
+(if (< emacs-major-version 27) (package-initialize))
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
