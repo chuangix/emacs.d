@@ -28,12 +28,6 @@
 (auto-save-visited-mode 1)
 (recentf-mode 1)
 
-(use-package session
-  :config
-  (session-initialize)
-  (desktop-save-mode 1)
-  (setq desktop-load-locked-desktop t))
-
 (setq-default indent-tabs-mode nil)
 
 (use-package hungry-delete
