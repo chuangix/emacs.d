@@ -1,15 +1,15 @@
-;;; init-essential.el --- Essential Configuration -*- lexical-binding: t -*-
+;;; init-common.el --- Common Configuration -*- lexical-binding: t -*-
 
 ;;; Commentary:
 
-;; This is the essential configuration which should be always used by
+;; This is the common configuration which should be always used by
 ;; anyone who want to use this configuration suite .emacs.d.
 
 ;;; Code:
 
 (when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta
-        mac-option-modifier 'none))
+  (defconst mac-command-modifier 'meta)
+  (defconst mac-option-modifier 'none))
 
 (when (memq system-type '(ms-doc windows-nt cygwin))
   (setq w32-recognize-altgr nil))
@@ -56,6 +56,6 @@
   (setq undo-tree-visualizer-timestamps t
         undo-tree-auto-save-history t))
 
-(provide 'init-essential)
+(provide 'init-common)
 
-;;; init-essential.el ends here
+;;; init-common.el ends here

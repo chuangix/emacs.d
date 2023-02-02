@@ -38,7 +38,7 @@
 (use-package hydra)
 (use-package use-package-hydra)
 
-(require 'init-essential)
+(require 'init-common)
 (require 'init-appearance)
 (require 'init-org)
 (require 'init-project)
