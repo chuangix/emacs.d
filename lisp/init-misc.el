@@ -46,16 +46,17 @@ Up^^             Down^^           Miscellaneous           % 2(mc/num-cursors) cu
 	  ("<drag-mouse-1>" ignore)
 	  ("q" nil)))
 
-(if (require 'user-preference nil t)
-  (let ((cli-executable (alist-get 'wakatime-cli-executable *user-preference*))
-        (api-key (alist-get 'wakatime-api-key *user-preference*)))
-    (or (eq nil cli-executable)
-        (eq nil api-key)
-          (use-package wakatime-mode
-            :config
-            (global-wakatime-mode)
-            (setq wakatime-cli-path cli-executable
-                  wakatime-api-key api-key)))))
+(eval-and-compile
+  (and (require 'user-preference nil t)
+       (let ((cli-executable (alist-get 'wakatime-cli-executable *user-preference*))
+             (api-key (alist-get 'wakatime-api-key *user-preference*)))
+         (or (eq nil cli-executable)
+             (eq nil api-key)
+             (use-package wakatime-mode
+               :config
+               (global-wakatime-mode)
+               (setq wakatime-cli-path cli-executable
+                     wakatime-api-key api-key))))))
 
 (provide 'init-misc)
 
