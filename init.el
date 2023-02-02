@@ -62,7 +62,6 @@
 ;; (require 'init-lang-javascript)
 ;; (require 'init-lang-typescript)
 ;; (require 'init-lang-franca-idl)
-(require 'init-wakatime)
 (require 'init-misc)
 
 (provide 'init)
