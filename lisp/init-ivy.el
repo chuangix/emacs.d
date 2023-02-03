@@ -38,7 +38,10 @@
    ("C-r" . swiper-isearch-backward)))
 
 (use-package ivy-avy)
-(use-package ivy-posframe)
+
+(use-package ivy-posframe
+  :config
+  (ivy-posframe-mode 1))
 
 (provide 'init-ivy)
 

@@ -11,9 +11,7 @@
   :diminish
   :hook (after-init . which-key-mode)
   :config
-  (progn
-    (which-key-setup-side-window-right)
-    (setq which-key-idle-delay 1.5)))
+  (setq which-key-idle-delay 1.5))
 
 (use-package multiple-cursors
   :bind
