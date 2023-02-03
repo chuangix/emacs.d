@@ -15,16 +15,15 @@
        (let ((clangd (alist-get 'clangd-executable *user-preference*))
              (lldb (alist-get 'lldb-executable *user-preference*)))
          (unless (eq nil clangd)
-           (with-eval-after-load 'lsp-mode
-             (setq lsp-clients-clangd-executable clangd)
-             (setq lsp-clients-clangd-args
-                   '("-j=2"
-                     "--background-index"
-                     "--clang-tidy"
-                     "--completion-style=bundled"
-                     "--pch-storage=memory"
-                     "--header-insertion=iwyu"
-                     "--header-insertion-decorators"))))
+           (setq lsp-clients-clangd-executable clangd)
+           (setq lsp-clients-clangd-args
+                 '("-j=2"
+                   "--background-index"
+                   "--clang-tidy"
+                   "--completion-style=bundled"
+                   "--pch-storage=memory"
+                   "--header-insertion=iwyu"
+                   "--header-insertion-decorators")))
          (unless (eq nil lldb)
            (use-package dap-lldb
              :config
