@@ -6,16 +6,17 @@
 
 ;;; Code:
 
-(when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
-  (require 'user-preference)
-  (let ((graphviz-bin (alist-get 'org-graphviz-bin *user-preference*))
-        (ditaa-jar (alist-get 'org-ditaa-jar *user-preference*))
-        (plantuml-jar (alist-get 'org-plantuml-jar *user-preference*)))
-    (unless (eq nil graphviz-bin)
-      (use-package graphviz-dot-mode)
-      (setenv "PATH" (concat graphviz-bin ";" (getenv "PATH"))))
-    (unless (eq nil ditaa-jar) (setq org-ditaa-jar-path ditaa-jar))
-    (unless (eq nil plantuml-jar) (setq org-plantuml-jar-path plantuml-jar))))
+(eval-and-compile
+  (when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
+    (require 'user-preference)
+    (let ((dot-executable (alist-get 'dot-executable *user-preference*))
+          (ditaa-jar (alist-get 'ditaa-jar *user-preference*))
+          (plantuml-jar (alist-get 'plantuml-jar *user-preference*)))
+      (unless (eq nil dot-executable)
+        (use-package graphviz-dot-mode)
+        (add-to-list 'exec-path (file-name-directory dot-executable)))
+      (unless (eq nil ditaa-jar) (defconst org-ditaa-jar-path ditaa-jar))
+      (unless (eq nil plantuml-jar) (defconst org-plantuml-jar-path plantuml-jar)))))
 
 (org-babel-do-load-languages 'org-babel-load-languages '((dot . t)
                                                          (ditaa . t)
