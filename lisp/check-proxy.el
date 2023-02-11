@@ -9,25 +9,22 @@
 
 (eval-and-compile
   (when (require 'user-preference nil t)
-    (let ((http (alist-get 'https-proxy *user-preference*))
-          (https (alist-get 'https-proxy *user-preference*)))
-      (or (eq nil http)
-          (eq nil https)
-          (progn
-            (setq url-proxy-services ())
-            (push (cons "http" http) url-proxy-services)
-            (push (cons "https" https) url-proxy-services)
-            (push (cons "no_proxy" "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)") url-proxy-services))))
-    (let ((account (alist-get 'proxy-account *user-preference*))
-          (password (alist-get 'proxy-password *user-preference*)))
-      (or (eq nil account)
-          (eq nil password)
-          (defconst url-http-proxy-basic-auth-storage
-            (list
-             (list "proxy.neusoft.com:8080"
-                   (cons "Input your LDAP UID !"
-                         (base64-encode-string
-                          (concat account ":" password))))))))))
+    (let ((https-proxy (alist-get 'https-proxy *user-preference*)))
+      (unless (eq nil https-proxy)
+        (setq url-proxy-services ())
+        (push (cons "http" https-proxy) url-proxy-services)
+        (push (cons "https" https-proxy) url-proxy-services)
+        (push (cons "no_proxy" "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)") url-proxy-services)
+        (let ((account (alist-get 'proxy-account *user-preference*))
+              (password (alist-get 'proxy-password *user-preference*)))
+          (or (eq nil account)
+              (eq nil password)
+              (defconst url-http-proxy-basic-auth-storage
+                (list
+                 (list https-proxy
+                       (cons "Input your LDAP UID !"
+                             (base64-encode-string
+                              (concat account ":" password))))))))))))
 
 (provide 'check-proxy)
 

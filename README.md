@@ -49,7 +49,6 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
     ;; (plantuml-jar . "C:\\Users\\chuan\\Downloads\\plantuml.1.2023.0.jar")
     ;; (clangd-executable . "C:\\Program Files\\LLVM\\bin\\clangd.exe")
     ;; (lldb-executable . "C:\\Program Files\\LLVM\\bin\\lldb-vscode.exe")
-    ;; (http-proxy . "proxy.XXXX.com:8080")
     ;; (https-proxy . "proxy.XXXX.com:8080")
     ;; (proxy-account . "XXXX")
     ;; (proxy-password . "XXXX")
