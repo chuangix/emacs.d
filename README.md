@@ -41,14 +41,14 @@ An example of `lisp/user-preference.el` is below, and it contains all the settin
     ;;;; You can also modify the right side values of these settings as you wish.
     ;;;; However, NEVER modify the left side keys!!!
     (editing-style . "emacs") ;; There are 3 options: emacs, vim, cua(Common User Access).
-    ;; (ripgrep-bin . "C:/msys64/ucrt64/bin")
-    ;; (wakatime-cli-executable . "c:/Users/chuan/Downloads/wakatime-cli-windows-amd64.exe")
+    ;; (ripgrep-executable . "C:\\msys64\\ucrt64\\bin")
+    ;; (wakatime-cli-executable . "C:\\Users\\chuan\\Downloads\\wakatime-cli-windows-amd64.exe")
     ;; (wakatime-api-key . "XXXX")
-    ;; (org-graphviz-bin . "C:/Program Files/Graphviz/bin")
-    ;; (org-ditaa-jar . "C:/Users/chuan/Downloads/ditaa0_9/ditaa0_9.jar")
-    ;; (org-plantuml-jar . "C:/Users/chuan/Downloads/plantuml.1.2023.0.jar")
-    ;; (clangd-executable . "C:/Program Files/LLVM/bin/clangd.exe")
-    ;; (lldb-executalbe . "C:/Program Files/LLVM/bin/lldb-vscode.exe")
+    ;; (org-graphviz-bin . "C:\\Program Files\\Graphviz\\bin")
+    ;; (org-ditaa-jar . "C:\\Users\\chuan\\Downloads\\ditaa0_9\\ditaa0_9.jar")
+    ;; (org-plantuml-jar . "C:\\Users\\chuan\\Downloads\\plantuml.1.2023.0.jar")
+    ;; (clangd-executable . "C:\\Program Files\\LLVM\\bin\\clangd.exe")
+    ;; (lldb-executable . "C:\\Program Files\\LLVM\\bin\\lldb-vscode.exe")
     ;; (http-proxy . "proxy.XXXX.com:8080")
     ;; (https-proxy . "proxy.XXXX.com:8080")
     ;; (proxy-account . "XXXX")

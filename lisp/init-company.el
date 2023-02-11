@@ -8,7 +8,6 @@
 ;;; Code:
 
 (use-package company
-  :diminish
   :config
   (global-company-mode)
   (setq company-minimum-prefix-length 1)
@@ -20,7 +19,6 @@
 
 (use-package company-box
   :when (display-graphic-p)
-  :diminish
   :hook (company-mode . company-box-mode))
 
 (provide 'init-company)

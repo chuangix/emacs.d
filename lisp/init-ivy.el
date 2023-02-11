@@ -11,7 +11,6 @@
 
 (use-package ivy
   :after amx
-  :diminish
   :hook (after-init . ivy-mode)
   :config
   (ivy-mode 1)

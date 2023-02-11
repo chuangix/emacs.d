@@ -8,7 +8,6 @@
 ;;; Code:
 
 (use-package which-key
-  :diminish
   :hook (after-init . which-key-mode)
   :config
   (setq which-key-idle-delay 1.5))

@@ -24,12 +24,13 @@
                    "--pch-storage=memory"
                    "--header-insertion=iwyu"
                    "--header-insertion-decorators")))
-         (unless (eq nil lldb)
-           (use-package dap-lldb
-             :config
-             (setq dap-lldb-debug-program '(lldb))
-             (setq dap-lldb-debugged-program-function
-	           (lambda () (read-file-name "Select file to debug: "))))))))
+         ;; (unless (eq nil lldb)
+         ;;   (use-package dap-lldb
+         ;;     :config
+         ;;     (setq dap-lldb-debug-program lldb)
+         ;;     (setq dap-lldb-debugged-program-function
+	 ;;           (lambda () (read-file-name "Select file to debug: ")))))
+         )))
 
 (use-package cmake-mode
   :mode (("CMakeLists\\.txt\\'" . cmake-mode)

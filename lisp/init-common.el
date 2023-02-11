@@ -35,14 +35,12 @@
          ("C-c d" . hungry-delete-forward)))
 
 (use-package move-dup
-  :diminish
   :hook (after-init . global-move-dup-mode)
   :bind
   ("<M-up>" . move-dup-move-lines-up)
   ("<M-down>" . move-dup-move-lines-down))
 
 (use-package highlight-symbol
-  :diminish
   :config
   (highlight-symbol-mode)
   :bind
@@ -50,7 +48,6 @@
    ("C-<f3>" . highlight-symbol-remove-all)))
 
 (use-package undo-tree
-  :diminish
   :hook (after-init . global-undo-tree-mode)
   :config
   (setq undo-tree-visualizer-timestamps t

@@ -7,7 +7,16 @@
 
 ;;; Code:
 
-(use-package projectile :diminish)
+(use-package rg)
+(eval-and-compile
+  (when (file-exists-p (locate-user-emacs-file "lisp/user-preference.el"))
+    (require 'user-preference)
+    (let ((ripgrep-executable (alist-get 'ripgrep-executable *user-preference*)))
+      (unless (eq nil ripgrep-executable)
+        (setq rg-executable ripgrep-executable)
+        (add-to-list 'exec-path (file-name-directory rg-executable))))))
+
+(use-package projectile)
 
 (use-package counsel-projectile
   :config

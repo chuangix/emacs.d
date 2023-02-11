@@ -19,8 +19,9 @@
 (require 'check-proxy)
 
 (require 'package)
-(setq package-archives '(("gnu" . "http://mirrors.cloud.tencent.com/elpa/gnu/")
+(setq package-archives '(("org" . "http://mirrors.cloud.tencent.com/elpa/org/")
                          ("melpa" . "http://mirrors.cloud.tencent.com/elpa/melpa/")
+                         ("gnu" . "http://mirrors.cloud.tencent.com/elpa/gnu/")
                          ("nongnu" . "http://mirrors.cloud.tencent.com/elpa/nongnu/")))
 (if (< emacs-major-version 27) (package-initialize))
 (unless (package-installed-p 'use-package)
@@ -34,7 +35,6 @@
   (require 'use-package))
 
 (use-package no-littering :demand t)
-(use-package diminish)
 (use-package hydra)
 (use-package use-package-hydra)
 
@@ -63,6 +63,8 @@
 ;; (require 'init-lang-typescript)
 ;; (require 'init-lang-franca-idl)
 (require 'init-misc)
+;; (require 'init-diminish)
+(require 'init-hydra)
 
 (provide 'init)
 
