@@ -15,6 +15,7 @@
     (("c" avy-goto-char-timer "jump to char" :exit t)
      ("w" avy-goto-word-or-subword-1 "jump to word" :exit t)
      ("l" avy-goto-line "jump to line" :exit t)
+     ("s" swiper "search and jump" :exit t)
      ("L" avy-copy-line "copy and insert line" :exit t)
      ("R" avy-copy-region "copy and insert region" :exit t)
      ("D" avy-zap-to-char "delete to char" :exit t))))
