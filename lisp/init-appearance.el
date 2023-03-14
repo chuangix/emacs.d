@@ -7,11 +7,11 @@
 
 ;;; Code:
 
-(setq inhibit-startup-screen t
-      inhibit-compacting-font-caches t
-      ring-bell-function 'ignore
-      blink-cursor-mode nil
-      show-paren-when-point-in-periphery t)
+(setq inhibit-startup-screen t)
+(setq inhibit-compacting-font-caches t)
+(setq ring-bell-function 'ignore)
+(setq blink-cursor-mode nil)
+(setq show-paren-when-point-in-periphery t)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
