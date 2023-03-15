@@ -19,16 +19,15 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
-(setq create-lockfiles nil
-      make-backup-files nil
-      auto-save-default nil
-      display-raw-bytes-as-hex t)
+(setq-default indent-tabs-mode nil)
+(setq create-lockfiles nil)
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+(setq display-raw-bytes-as-hex t)
 
 (global-auto-revert-mode 1)
 (auto-save-visited-mode 1)
 (recentf-mode 1)
-
-(setq-default indent-tabs-mode nil)
 
 (use-package hungry-delete
   :bind (("C-c DEL" . hungry-delete-backward)

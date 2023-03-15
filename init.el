@@ -7,12 +7,13 @@
 
 ;;; Code:
 
-(setq gc-cons-threshold most-positive-fixnum
-      gc-cons-percentage 0.6)
+(setq gc-cons-threshold most-positive-fixnum)
+(setq gc-cons-percentage 0.6)
 
-(let ((dir (locate-user-emacs-file "lisp")))
-  (add-to-list 'load-path (file-name-as-directory dir))
-  (add-to-list 'load-path (file-name-as-directory (expand-file-name "lang" dir))))
+(let* ((lisp-dir (locate-user-emacs-file "lisp"))
+       (lang-dir (expand-file-name "lang" lisp-dir)))
+  (add-to-list 'load-path (file-name-as-directory lisp-dir))
+  (add-to-list 'load-path (file-name-as-directory lang-dir)))
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
