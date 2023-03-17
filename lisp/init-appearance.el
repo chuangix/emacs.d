@@ -50,7 +50,7 @@
         (setq dashboard-item-names '(("Recent Files:" . "Recently opened files:")
                                      ("Agenda for today:" . "Today's agenda:")
                                      ("Agenda for the coming week:" . "Agenda:")))
-        (setq dashboard-startup-banner 'logo)
+        (setq dashboard-startup-banner (locate-user-emacs-file "asset/logo.png"))
         (setq dashboard-center-content t)
         (setq dashboard-set-heading-icons t)
         (setq dashboard-set-file-icons t)
