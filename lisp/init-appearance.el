@@ -21,18 +21,17 @@
 (size-indication-mode -1)
 (toggle-truncate-lines -1)
 
-(when (memq system-type '(ms-doc windows-nt cygwin))
-  (set-face-attribute 'default nil
-                      :font "Consolas"
-                      :height 110)
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-		      charset (font-spec
-                               :family "微软雅黑"
-                               :size 20))))
-
 (if (display-graphic-p)
     (progn
+      (when (memq system-type '(ms-doc windows-nt cygwin))
+        (set-face-attribute 'default nil
+                            :font "Consolas"
+                            :height 110)
+        (dolist (charset '(kana han symbol cjk-misc bopomofo))
+          (set-fontset-font (frame-parameter nil 'font)
+		            charset (font-spec
+                                     :family "微软雅黑"
+                                     :size 20))))
       (global-hl-line-mode 1)
       (use-package doom-themes
         :config
@@ -56,8 +55,6 @@
         (setq dashboard-set-heading-icons t)
         (setq dashboard-set-file-icons t)
         (setq dashboard-set-footer t)
-        (dashboard-modify-heading-icons '((recents . "file-text")
-                                          (bookmarks . "book")))
         (setq dashboard-set-navigator t)
         (dashboard-setup-startup-hook))
       (use-package dashboard-hackernews)
@@ -68,11 +65,8 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package smart-mode-line
-  :config
-  (setq sml/no-confirm-load-theme t)
-  (setq sml/theme 'dark)
-  (sml/setup))
+(use-package doom-modeline
+  :hook (after-init . doom-modeline-mode))
 
 (provide 'init-appearance)
 
