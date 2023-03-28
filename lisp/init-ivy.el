@@ -14,10 +14,10 @@
   :hook (after-init . ivy-mode)
   :config
   (ivy-mode 1)
-  (setq ivy-initial-inputs-alist nil
-	ivy-count-format "%d/%d "
-	enable-recursive-minibuffers t
-	ivy-re-builders-alist '((swiper . ivy--regex-plus)
+  (setq ivy-initial-inputs-alist nil)
+  (setq ivy-count-format "%d/%d ")
+  (setq enable-recursive-minibuffers t)
+  (setq ivy-re-builders-alist '((swiper . ivy--regex-plus)
                                 (swiper-isearch . ivy--regex-plus)
                                 (t . ivy--regex-fuzzy))))
 
@@ -30,13 +30,11 @@
 
 (use-package swiper
   :config
-  (setq swiper-action-recenter t
-	swiper-include-line-number-in-search t)
+  (setq swiper-action-recenter t)
+  (setq swiper-include-line-number-in-search t)
   :bind
   (("C-s" . swiper)
    ("C-r" . swiper-isearch-backward)))
-
-(use-package ivy-avy)
 
 (use-package ivy-posframe
   :config

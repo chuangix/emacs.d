@@ -29,6 +29,8 @@ _c_ Goto Char    _w_ Goto Word    _l_ Goto Line    _r_ Copy Region
 
 (use-package avy-zap)
 
+(use-package ivy-avy)
+
 (provide 'init-avy)
 
 ;;; init-avy.el ends here

@@ -41,10 +41,10 @@
 
 (require 'init-common)
 (require 'init-appearance)
+(require 'init-ivy)
+(require 'init-avy)
 (require 'init-org)
 (require 'init-project)
-(require 'init-avy)
-(require 'init-ivy)
 (require 'init-company)
 ;; (require 'init-flyspell)
 (require 'init-flycheck)
