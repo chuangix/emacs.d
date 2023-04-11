@@ -13,19 +13,11 @@
         avy-all-windows t
         avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p))
   :bind
-  (("C-c a" . hydra-avy/body))
-  :hydra (hydra-avy
-          (:hint nil)
-          "
-^Character^         ^Word^           ^Line^            ^Region^
---------------------------------------------------------------------------
-_c_ Goto Char    _w_ Goto Word    _l_ Goto Line    _r_ Copy Region
-"
-          ("c" avy-goto-char-timer :exit t)
-          ("w" avy-goto-word-0 :exit t)
-          ("l" avy-goto-line :exit t)
-          ("r" avy-copy-region :exit t)
-          ("q" nil)))
+  ("C-c j" . avy-goto-char-timer)
+  ("C-c w" . avy-goto-word-0)
+  ("C-c l" . avy-goto-line)
+  ("C-c L" . avy-copy-line)
+  ("C-c R" . avy-copy-region))
 
 (use-package avy-zap)
 
