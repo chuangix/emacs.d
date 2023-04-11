@@ -19,7 +19,9 @@
   ("C-c L" . avy-copy-line)
   ("C-c R" . avy-copy-region))
 
-(use-package avy-zap)
+(use-package avy-zap
+  :bind
+  ("C-c Z" . avy-zap-to-char))
 
 (use-package ivy-avy)
 
