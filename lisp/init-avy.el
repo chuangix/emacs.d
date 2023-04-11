@@ -13,7 +13,7 @@
         avy-all-windows t
         avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p))
   :bind
-  ("C-c j" . avy-goto-char-timer)
+  ("C-c c" . avy-goto-char-timer)
   ("C-c w" . avy-goto-word-1)
   ("C-c l" . avy-goto-line)
   ("C-c L" . avy-copy-line)
