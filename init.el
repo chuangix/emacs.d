@@ -36,8 +36,6 @@
   (require 'use-package))
 
 (use-package no-littering :demand t)
-(use-package hydra)
-(use-package use-package-hydra)
 
 (require 'init-common)
 (require 'init-appearance)
@@ -65,7 +63,6 @@
 ;; (require 'init-lang-franca-idl)
 (require 'init-misc)
 ;; (require 'init-diminish)
-(require 'init-hydra)
 
 (provide 'init)
 
