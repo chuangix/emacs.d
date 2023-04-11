@@ -43,7 +43,7 @@
 (require 'init-appearance)
 (require 'init-ivy)
 (require 'init-avy)
-(require 'init-org)
+;; (require 'init-org)
 (require 'init-project)
 (require 'init-company)
 ;; (require 'init-flyspell)
