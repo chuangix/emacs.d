@@ -16,14 +16,17 @@
         (setq rg-executable ripgrep-executable)
         (add-to-list 'exec-path (file-name-directory rg-executable))))))
 
-(use-package projectile)
+(use-package projectile
+  :bind
+  ("C-S-f" . projectile-ripgrep))
 
-(use-package counsel-projectile
-  :config
-  (counsel-projectile-mode))
+(use-package magit
+  :bind
+  ("C-S-g" . magit-status))
 
-(use-package magit)
-(use-package treemacs)
+(use-package treemacs
+  :bind
+  ("C-S-b" . treemacs))
 
 (provide 'init-project)
 
