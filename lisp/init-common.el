@@ -52,6 +52,13 @@
   (setq undo-tree-visualizer-timestamps t
         undo-tree-auto-save-history t))
 
+(use-package multiple-cursors)
+
+(use-package which-key
+  :hook (after-init . which-key-mode)
+  :config
+  (setq which-key-idle-delay 1.5))
+
 (provide 'init-common)
 
 ;;; init-common.el ends here
