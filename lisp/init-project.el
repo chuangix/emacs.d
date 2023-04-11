@@ -18,15 +18,9 @@
 
 (use-package projectile
   :bind
-  ("C-S-f" . projectile-ripgrep))
+  ("C-c C-f" . projectile-ripgrep))
 
-(use-package magit
-  :bind
-  ("C-S-g" . magit-status))
-
-(use-package treemacs
-  :bind
-  ("C-S-b" . treemacs))
+(use-package magit)
 
 (provide 'init-project)
 
